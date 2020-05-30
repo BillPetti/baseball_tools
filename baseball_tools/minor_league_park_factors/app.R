@@ -1,5 +1,6 @@
 library(shiny)
-library(shinythemes)
+library(shinydashboard)
+library(shinyWidgets)
 library(DT)
 library(tidyverse)
 
@@ -8,15 +9,18 @@ setwd('/Users/williampetti/baseball_tools/baseball_tools/minor_league_park_facto
 milb_pf <- read_csv('data/minor_league_park_factors.csv')
 
 ui <- 
+    
     navbarPage(
-        #theme = 'bootstrap.css',
-        #theme = shinytheme('flatly'),
+        theme = "custom_theme.css",
+        setBackgroundColor("#ecf0f5"),
         
-        title = ('baseball tools'),
-        tabPanel("Minor League Park Factors", 
-                 DTOutput('milb_pf_table'))
+        title = "baseball tools",
+        selected = "Minor League Park Factors",
+        
+        tabPanel(title = "Minor League Park Factors",
+                 DT::DTOutput('milb_pf_table')), 
+        tabPanel(title = "About")
     )
-
 
 server <- function(input, output) {
     
