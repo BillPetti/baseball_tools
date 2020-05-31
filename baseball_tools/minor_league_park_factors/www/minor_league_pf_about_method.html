@@ -1,0 +1,7 @@
+Developed and maintained by <a href = 'https://billpetti.github.io/aboutme/' target='_blank'>Bill Petti</a>
+<br>
+<br>
+<b>Methodology</b>
+<br>
+<br>
+MiLB game scores were acquired using the <a href="http://billpetti.github.io/baseballr/">baseballr</a> package from MLB's stats api. A mixed-effect linear model was fit to the total runs scored in a game and included a random effect for the visiting team and random effect for the park. Using the intercept and the random effect for the park, runs scored per game were indexed for levels, with 100 equal to average runs scored per game. Park factors were estimated for 1-, 2-, 3-, 4-, and 5-year stretches. The park factors were then halved to allow for easier application to player stats. No other data was taken into account for this version.

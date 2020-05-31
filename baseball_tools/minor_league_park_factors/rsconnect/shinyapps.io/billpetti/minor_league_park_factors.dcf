@@ -1,0 +1,12 @@
+name: minor_league_park_factors
+title: minor_league_park_factors
+username:
+account: billpetti
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 2382515
+bundleId: 3210604
+url: https://billpetti.shinyapps.io/minor_league_park_factors/
+when: 1590926435.41618
+asMultiple: FALSE
+asStatic: FALSE

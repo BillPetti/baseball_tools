@@ -4,7 +4,7 @@ library(shinyWidgets)
 library(DT)
 library(tidyverse)
 
-setwd('/Users/williampetti/baseball_tools/baseball_tools/minor_league_park_factors/')
+#setwd('/Users/williampetti/baseball_tools/baseball_tools/minor_league_park_factors/')
 
 milb_pf <- read_csv('data/minor_league_park_factors.csv')
 
@@ -19,7 +19,9 @@ ui <-
         
         tabPanel(title = "Minor League Park Factors",
                  DT::DTOutput('milb_pf_table')), 
-        tabPanel(title = "About")
+        tabPanel(title = "About", 
+                 includeHTML('www/minor_league_pf_about_method.html')
+        )
     )
 
 server <- function(input, output) {
